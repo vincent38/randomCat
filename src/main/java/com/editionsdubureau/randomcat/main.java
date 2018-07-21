@@ -33,7 +33,7 @@ public class main {
         // This is where the magic happens...
         HttpResponse<JsonNode> cat;
         try {
-            cat = Unirest.get("http://random.cat/meow").asJson();
+            cat = Unirest.get("https://aws.random.cat/meow").asJson();
             System.out.println(cat.getBody());
             JSONObject catJson = cat.getBody().getObject();
             String link = catJson.getString("file");
